@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  padding: 10px;
+}
+
+.wrapper {
+  margin-bottom: 50px;
+}
+
+p {
+  font-family: Lato;
+}

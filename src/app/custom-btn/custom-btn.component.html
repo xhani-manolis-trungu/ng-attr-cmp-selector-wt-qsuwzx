@@ -1,0 +1,11 @@
+<button class="btn btn-primary" [disabled]="isDisabled" (click)="onClick()">
+  <ng-container *ngIf="!isProcessing; else processingTpl">
+    <i *ngIf="icon" [ngClass]="iconClass"></i>
+    <ng-content></ng-content>
+  </ng-container>
+
+  <ng-template #processingTpl>
+	  <i class="fa fa-spinner fa-spin"></i>
+    <span>{{ processingLabel }}</span>
+  </ng-template>
+</button>

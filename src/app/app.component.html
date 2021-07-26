@@ -1,0 +1,29 @@
+<div class="wrapper">
+	<app-table></app-table>
+</div>
+
+<div class="wrapper">
+	<h3>Custom button</h3>
+	<app-custom-btn 
+    [icon]="icon" 
+    [isProcessing]="isProcessing" 
+    [isDisabled]="isDisabled" 
+    (clicked)="onClicked()"
+  >
+		Click me
+	</app-custom-btn>
+</div>
+
+<div class="wrapper">
+	<h3>Custom button (native API exposed)</h3>
+	<button
+    class="btn btn-primary"
+    app-custom-btn
+    [icon]="icon"
+    [isProcessing]="isProcessing"
+    [disabled]="isDisabled"
+    (click)="onClicked()"
+  >
+    Click me
+  </button>
+</div>
